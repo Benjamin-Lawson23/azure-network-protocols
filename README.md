@@ -52,13 +52,40 @@ The main aim of this turtorial is to get a better understanding of firewalls and
 <img src="https://i.imgur.com/dfcWSdh.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<h2>Step 2: Observe ICMP Traffic</h2>
+
+1. Use Remote Desktop to connect to your Windows 10 Virtual Machine (If you are using a Mac, you can download the Microsoft Remote Desktop app from the App Store) 
+2. Within your Windows 10 Virtual Machine, open a browser and download and install Wireshark
+3. Open Wireshark and type ICMP in the bar at the top to filter for ICMP traffic only
+4. Find the private IP address of the Ubuntu virtual machine on Azure and then ping it from within the Windows 10 virtual machine
+5. Observe ping requests and replies within WireShark
+6. From The Windows 10 virtual machine, open command line or PowerShell and attempt to ping a public website (such as www.google.com) and observe the traffic in WireShark
+7. We will now use VM2's firewall to block ICMP. First, initiate a perpetual ping (-t) from your Windows 10 virtual machine to your Ubuntu virtual machine
+8. In Azure, open the Network Security Group for your Ubuntu virtual machine and disable incoming (inbound) ICMP traffic
+9. Back in the Windows 10 virtual machine, note the ICMP traffic in WireShark and the command line Ping activity
+10. Re-enable ICMP traffic for the Network Security Group for your Ubuntu virtual machine 
+11. Back in the Windows 10 virtual machine, observe the ICMP traffic in WireShark and the command line Ping activity (it should start receiving replies again)
+12. Stop the ping activity (ctrl + c) 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/02EVq2V.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
+
+<p>
+<img src="https://i.imgur.com/sZ00n0t.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/nQDRnwI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/7EzT9VK.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+</p>
+
+
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 </p>
