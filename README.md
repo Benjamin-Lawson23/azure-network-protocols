@@ -87,12 +87,17 @@ The main aim of this turtorial is to get a better understanding of firewalls and
 
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+<h2>Step 3: Observe SSH Traffic</h2>
+
+1. Back in Wireshark, filter for SSH traffic only
+2. From your Windows 10 virtual machine, use Secure Shell to login into your Ubuntu Virtual Machine's command line (ssh username@private ip address)
+3. Type Linux commands (username, pwd, etc) into the  SSH connection and observe SSH traffic spam in WireShark
+4. Exit the SSH connection by typing ‘exit’ and pressing [Enter]
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/YSkVjtT.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
